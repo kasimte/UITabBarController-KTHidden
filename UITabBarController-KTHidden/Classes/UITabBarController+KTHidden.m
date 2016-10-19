@@ -39,7 +39,7 @@
     return (completion) ? completion(YES) : nil;
   
   CGRect frame = [[self tabBar] frame];
-  CGFloat offsetY = (hidden) ? -frame.size.height : frame.size.height;
+  CGFloat offsetY = (hidden) ? frame.size.height : -frame.size.height;
   
   [UIView animateWithDuration:((animated) ? 0.3 : 0.0)
                    animations:^{
