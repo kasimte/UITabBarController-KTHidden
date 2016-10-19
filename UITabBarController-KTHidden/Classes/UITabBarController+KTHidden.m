@@ -33,14 +33,13 @@
 
 - (void)setTabBarHidden:(BOOL)hidden
                animated:(BOOL)animated
-             completion:(void (^)(BOOL))completion {
+             completion:(void (^ __nullable)(BOOL finished))completion {
   
   if ([self isTabBarHidden] == hidden)
     return (completion) ? completion(YES) : nil;
   
   CGRect frame = [[self tabBar] frame];
-  CGFloat height = frame.size.height;
-  CGFloat offsetY = (hidden) ? -height : height;
+  CGFloat offsetY = (hidden) ? -frame.size.height : frame.size.height;
   
   [UIView animateWithDuration:((animated) ? 0.3 : 0.0)
                    animations:^{

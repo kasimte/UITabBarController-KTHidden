@@ -23,6 +23,7 @@
 //
 
 #import "KTViewController.h"
+#import <UITabBarController_KTHidden/UITabBarController+KTHidden.h>
 
 @interface KTViewController ()
 
@@ -30,16 +31,10 @@
 
 @implementation KTViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)didPressHideButton:(id)sender {
+  UITabBarController *tabBarController = [self tabBarController];
+  BOOL isHidden = [tabBarController isTabBarHidden];
+  [tabBarController setTabBarHidden:!isHidden animated:YES completion:nil];
 }
 
 @end
