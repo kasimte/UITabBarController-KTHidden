@@ -5,11 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/UITabBarController-KTHidden.svg?style=flat)](http://cocoapods.org/pods/UITabBarController-KTHidden)
 [![Platform](https://img.shields.io/cocoapods/p/UITabBarController-KTHidden.svg?style=flat)](http://cocoapods.org/pods/UITabBarController-KTHidden)
 
+A UITabBarController category with UITabBar hide and show animations.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -20,9 +20,17 @@ it, simply add the following line to your Podfile:
 pod "UITabBarController-KTHidden"
 ```
 
+## Usage
+
+Hide the tab bar like so:
+
+```
+[tabBarController setTabBarHidden:YES animated:YES completion:nil];
+```
+
 ## Author
 
-Kasim Te, kasim@tekkinnovations.com
+Kasim Te, kasimte@gmail.com
 
 ## License
 

@@ -1,3 +1,4 @@
+# coding: utf-8
 #
 # Be sure to run `pod lib lint UITabBarController-KTHidden.podspec' to ensure this is a
 # valid spec before submitting.
@@ -9,24 +10,17 @@
 Pod::Spec.new do |s|
   s.name             = 'UITabBarController-KTHidden'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of UITabBarController-KTHidden.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'A UITabBarController category with UITabBar hide and show animations.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Allows one-line changes to the visibility of the controller’s built-in tabbar. The interface is based on UINavigationController's setToolbarHidden:animated: and toolbarHidden methods.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/UITabBarController-KTHidden'
+  s.homepage         = 'https://github.com/kasimte/UITabBarController-KTHidden'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Kasim Te' => 'kasim@tekkinnovations.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/UITabBarController-KTHidden.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Kasim Te' => 'kasimte@gmail.com' }
+  s.source           = { :git => 'https://github.com/kasimte/UITabBarController-KTHidden.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/kasimte'
 
   s.ios.deployment_target = '8.0'
 

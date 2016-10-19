@@ -1,5 +1,5 @@
 //
-// KTAppDelegate.h
+// UITabBarController+KTHidden.h
 //
 // Copyright (c) 2016 Kasim Te (kasimte@gmail.com)
 //
@@ -22,10 +22,14 @@
 // THE SOFTWARE.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
-@interface KTAppDelegate : UIResponder <UIApplicationDelegate>
+@interface UITabBarController (KTHidden)
 
-@property (strong, nonatomic) UIWindow *window;
+@property(nonatomic, getter=isTabBarHidden, readonly) BOOL tabBarHidden;
+
+- (void)setTabBarHidden:(BOOL)hidden
+               animated:(BOOL)animated
+             completion:(void (^ __nullable)(BOOL finished))completion;
 
 @end

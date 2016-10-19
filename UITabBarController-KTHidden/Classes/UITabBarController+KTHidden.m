@@ -1,5 +1,5 @@
 //
-// KTAppDelegate.h
+// UITabBarController+KTHidden.m
 //
 // Copyright (c) 2016 Kasim Te (kasimte@gmail.com)
 //
@@ -22,10 +22,31 @@
 // THE SOFTWARE.
 //
 
-@import UIKit;
+#import "UITabBarController+KTHidden.h"
 
-@interface KTAppDelegate : UIResponder <UIApplicationDelegate>
+@implementation UITabBarController (KTHidden)
 
-@property (strong, nonatomic) UIWindow *window;
+- (BOOL)isTabBarHidden {
+  return [[self tabBar] frame].origin.y < CGRectGetMaxY([[self view] frame]);
+}
+
+
+- (void)setTabBarHidden:(BOOL)hidden
+               animated:(BOOL)animated
+             completion:(void (^ __nullable)(BOOL finished))completion {
+  
+  if ([self isTabBarHidden] == hidden)
+    return (completion) ? completion(YES) : nil;
+  
+  CGRect frame = [[self tabBar] frame];
+  CGFloat offsetY = (hidden) ? -frame.size.height : frame.size.height;
+  
+  [UIView animateWithDuration:((animated) ? 0.3 : 0.0)
+                   animations:^{
+    [[self tabBar] setFrame:CGRectOffset(frame,
+                                         0,
+                                         offsetY)];
+  } completion:completion];
+}
 
 @end
