@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="724" y="419"/>
         </scene>
-        <!--Toggle-->
+        <!--Example-->
         <scene sceneID="5yp-Hg-JDa">
             <objects>
                 <viewController id="0f3-Oj-Wqy" customClass="KTViewController" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <constraint firstItem="3hz-Ib-RpV" firstAttribute="centerX" secondItem="9ta-7g-H9h" secondAttribute="centerX" id="WFb-7e-1uI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Toggle" id="1aX-4j-uJE"/>
+                    <tabBarItem key="tabBarItem" title="Example" id="1aX-4j-uJE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOC-kE-98U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
