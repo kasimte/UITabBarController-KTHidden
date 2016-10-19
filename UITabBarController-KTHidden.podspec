@@ -11,13 +11,6 @@ Pod::Spec.new do |s|
   s.name             = 'UITabBarController-KTHidden'
   s.version          = '0.1.0'
   s.summary          = 'A UITabBarController category with UITabBar hide and show animations.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
 Allows one-line changes to the visibility of the controller’s built-in tabbar. The interface is based on UINavigationController's setToolbarHidden:animated: and toolbarHidden methods.
                        DESC
