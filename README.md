@@ -22,7 +22,7 @@ pod "UITabBarController-KTHidden"
 
 ## Author
 
-Kasim Te, kasim@tekkinnovations.com
+Kasim Te, kasimte@gmail.com
 
 ## License
 
