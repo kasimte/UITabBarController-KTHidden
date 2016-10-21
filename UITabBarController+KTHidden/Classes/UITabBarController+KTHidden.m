@@ -27,7 +27,7 @@
 @implementation UITabBarController (KTHidden)
 
 - (BOOL)isTabBarHidden {
-  return [[self tabBar] frame].origin.y < CGRectGetMaxY([[self view] frame]);
+  return [[self tabBar] frame].origin.y >= CGRectGetMaxY([[self view] frame]);
 }
 
 
@@ -39,13 +39,14 @@
     return (completion) ? completion(YES) : nil;
   
   CGRect frame = [[self tabBar] frame];
-  CGFloat offsetY = (hidden) ? frame.size.height : -frame.size.height;
+  frame.origin.y =
+    (hidden) ?
+    [[self view] frame].size.height :
+    [[self view] frame].size.height - frame.size.height;
   
   [UIView animateWithDuration:((animated) ? 0.3 : 0.0)
                    animations:^{
-    [[self tabBar] setFrame:CGRectOffset(frame,
-                                         0,
-                                         offsetY)];
+      [[self tabBar] setFrame:frame];
   } completion:completion];
 }
 

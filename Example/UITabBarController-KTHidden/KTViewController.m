@@ -27,14 +27,37 @@
 
 @interface KTViewController ()
 
+@property (nonatomic, weak) IBOutlet UIButton *hideButton;
+@property (nonatomic, weak) IBOutlet UIButton *showButton;
+
 @end
 
 @implementation KTViewController
 
 - (IBAction)didPressHideButton:(id)sender {
   UITabBarController *tabBarController = [self tabBarController];
-  BOOL isHidden = [tabBarController isTabBarHidden];
-  [tabBarController setTabBarHidden:!isHidden animated:YES completion:nil];
+  [tabBarController setTabBarHidden:YES
+                           animated:YES
+                         completion:^(BOOL finished){
+    [self updateButtons];
+  }];
+}
+
+
+- (IBAction)didPressShowButton:(id)sender {
+  UITabBarController *tabBarController = [self tabBarController];
+  [tabBarController setTabBarHidden:NO
+                           animated:YES
+                         completion:^(BOOL finished){
+    [self updateButtons];
+  }];
+}
+
+
+- (void)updateButtons {
+  UITabBarController *tabBarController = [self tabBarController];
+  [[self hideButton] setEnabled:![tabBarController isTabBarHidden]];
+  [[self showButton] setEnabled:[tabBarController isTabBarHidden]];
 }
 
 @end

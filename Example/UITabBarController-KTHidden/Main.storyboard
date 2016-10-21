@@ -37,20 +37,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hz-Ib-RpV">
-                                <state key="normal" title="Toggle Hidden"/>
-                                <connections>
-                                    <action selector="didPressHideButton:" destination="0f3-Oj-Wqy" eventType="touchUpInside" id="aHQ-8Z-SPn"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUE-Je-QDD">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hz-Ib-RpV">
+                                        <state key="normal" title="Hide Tab Bar"/>
+                                        <connections>
+                                            <action selector="didPressHideButton:" destination="0f3-Oj-Wqy" eventType="touchUpInside" id="sUF-VE-dff"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRs-LF-DiX">
+                                        <state key="normal" title="Show Tab Bar"/>
+                                        <connections>
+                                            <action selector="didPressShowButton:" destination="0f3-Oj-Wqy" eventType="touchUpInside" id="TGj-tt-2U6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8Y2-2S-Y50"/>
+                                    <constraint firstItem="3hz-Ib-RpV" firstAttribute="top" secondItem="QUE-Je-QDD" secondAttribute="top" constant="30" id="BRr-uF-Vi3"/>
+                                    <constraint firstAttribute="height" constant="128" id="Gf1-HW-ug2"/>
+                                    <constraint firstAttribute="bottom" secondItem="LRs-LF-DiX" secondAttribute="bottom" constant="24" id="UJ3-OQ-yOz"/>
+                                    <constraint firstItem="3hz-Ib-RpV" firstAttribute="centerX" secondItem="QUE-Je-QDD" secondAttribute="centerX" id="ZhO-QO-PY0"/>
+                                    <constraint firstItem="LRs-LF-DiX" firstAttribute="centerX" secondItem="QUE-Je-QDD" secondAttribute="centerX" id="wl1-2T-dZh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3hz-Ib-RpV" firstAttribute="centerY" secondItem="9ta-7g-H9h" secondAttribute="centerY" id="JMv-f0-I0O"/>
-                            <constraint firstItem="3hz-Ib-RpV" firstAttribute="centerX" secondItem="9ta-7g-H9h" secondAttribute="centerX" id="WFb-7e-1uI"/>
+                            <constraint firstItem="QUE-Je-QDD" firstAttribute="centerY" secondItem="9ta-7g-H9h" secondAttribute="centerY" id="XBz-IF-rRL"/>
+                            <constraint firstItem="QUE-Je-QDD" firstAttribute="centerX" secondItem="9ta-7g-H9h" secondAttribute="centerX" id="coK-yb-qdc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Example" id="1aX-4j-uJE"/>
+                    <connections>
+                        <outlet property="hideButton" destination="3hz-Ib-RpV" id="3h1-Jt-YNg"/>
+                        <outlet property="showButton" destination="LRs-LF-DiX" id="KhP-dI-qfi"/>
+                        <outlet property="view" destination="9ta-7g-H9h" id="fM3-BF-LcI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOC-kE-98U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
