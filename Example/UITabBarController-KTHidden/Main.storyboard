@@ -17,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="pzq-0B-EpO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Blank" id="6Nd-n6-ofc"/>
                 </viewController>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="8Y2-2S-Y50"/>
                                     <constraint firstItem="3hz-Ib-RpV" firstAttribute="top" secondItem="QUE-Je-QDD" secondAttribute="top" constant="30" id="BRr-uF-Vi3"/>
@@ -63,7 +63,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QUE-Je-QDD" firstAttribute="centerY" secondItem="9ta-7g-H9h" secondAttribute="centerY" id="XBz-IF-rRL"/>
                             <constraint firstItem="QUE-Je-QDD" firstAttribute="centerX" secondItem="9ta-7g-H9h" secondAttribute="centerX" id="coK-yb-qdc"/>
@@ -87,7 +87,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="D5K-vt-O8y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="0f3-Oj-Wqy" kind="relationship" relationship="viewControllers" id="1b9-Bs-27P"/>

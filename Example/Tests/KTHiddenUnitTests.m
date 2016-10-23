@@ -1,5 +1,5 @@
 //
-// KTViewController.m
+// KTHiddenUnitTests.m
 //
 // Copyright (c) 2016 Kasim Te (kasimte@gmail.com)
 //
@@ -22,42 +22,30 @@
 // THE SOFTWARE.
 //
 
-#import "KTViewController.h"
+#import <XCTest/XCTest.h>
 @import UITabBarController_KTHidden;
 
-@interface KTViewController ()
-
-@property (nonatomic, weak) IBOutlet UIButton *hideButton;
-@property (nonatomic, weak) IBOutlet UIButton *showButton;
+@interface KTHiddenUnitTests : XCTestCase
 
 @end
 
-@implementation KTViewController
+@implementation KTHiddenUnitTests
 
-- (IBAction)didPressHideButton:(id)sender {
-  UITabBarController *tabBarController = [self tabBarController];
-  [tabBarController setTabBarHidden:YES
-                           animated:YES
-                         completion:^(BOOL finished){
-    [self updateButtons];
-  }];
+- (void)setUp {
+  [super setUp];
 }
 
-
-- (IBAction)didPressShowButton:(id)sender {
-  UITabBarController *tabBarController = [self tabBarController];
-  [tabBarController setTabBarHidden:NO
-                           animated:YES
-                         completion:^(BOOL finished){
-    [self updateButtons];
-  }];
+- (void)tearDown {
+  [super tearDown];
 }
 
-
-- (void)updateButtons {
-  UITabBarController *tabBarController = [self tabBarController];
-  [[self hideButton] setEnabled:![tabBarController isTabBarHidden]];
-  [[self showButton] setEnabled:[tabBarController isTabBarHidden]];
+- (void)testExample {
+  UITabBarController *tab = [[UITabBarController alloc] init];
+  [tab setTabBarHidden:YES animated:NO completion:nil];
+  XCTAssertTrue([tab isTabBarHidden], @"Tab bar should be hidden.");
+  [tab setTabBarHidden:NO animated:NO completion:nil];
+  XCTAssertFalse([tab isTabBarHidden], @"Tab bar should not be hidden.");
 }
+
 
 @end

@@ -20,6 +20,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		69778CB129EFECB3477EFD21 /* Pods_UITabBarController_KTHidden_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53592244C4A502AF533E9C8 /* Pods_UITabBarController_KTHidden_Example.framework */; };
+		86C2A9A01DBD400D001084A6 /* KTHiddenUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2A99F1DBD400D001084A6 /* KTHiddenUnitTests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		915E07D158CEBA8044D397E5 /* Pods_UITabBarController_KTHidden_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8BEB5D279ACC27FAAC0A0C /* Pods_UITabBarController_KTHidden_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B73C2B089DAF18CAB1D0D42 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7EC5DD8ED028BE388A7459F0 /* Pods-UITabBarController-KTHidden_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITabBarController-KTHidden_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITabBarController-KTHidden_Tests/Pods-UITabBarController-KTHidden_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		86C2A99F1DBD400D001084A6 /* KTHiddenUnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTHiddenUnitTests.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A46FC3461422B99FF58F26DF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B36992AE99C730165142A85E /* Pods-UITabBarController-KTHidden_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITabBarController-KTHidden_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITabBarController-KTHidden_Tests/Pods-UITabBarController-KTHidden_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				86C2A99F1DBD400D001084A6 /* KTHiddenUnitTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C2A9A01DBD400D001084A6 /* KTHiddenUnitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
