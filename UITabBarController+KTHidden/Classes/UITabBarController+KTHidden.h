@@ -26,8 +26,22 @@
 
 @interface UITabBarController (KTHidden)
 
+/**
+ A Boolean indicating whether the controller’s built-in tab bar is visible.
+ */
 @property(nonatomic, getter=isTabBarHidden, readonly) BOOL tabBarHidden;
 
+/**
+ Changes the visibility of the controller’s built-in tab bar.
+ 
+ You can use this method to animate changes to the visibility of the built-in tab bar.
+ 
+ Calling this method with the animated parameter set to NO is equivalent animating with a time of 0.0.
+
+ @param hidden     Specify YES to hide the tab bar or NO to show it.
+ @param animated   Specify YES if you want the tab bar to be animated on or off the screen.
+ @param completion Optionally specify a block to run when the animation is complete.
+ */
 - (void)setTabBarHidden:(BOOL)hidden
                animated:(BOOL)animated
              completion:(void (^ __nullable)(BOOL finished))completion;

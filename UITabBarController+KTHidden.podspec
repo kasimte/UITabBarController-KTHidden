@@ -1,7 +1,7 @@
 # coding: utf-8
 Pod::Spec.new do |s|
   s.name             = 'UITabBarController+KTHidden'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A UITabBarController category with UITabBar hide and show animations.'
   s.description      = <<-DESC
 Allows one-line changes to the visibility of the controller’s built-in tabbar. The interface is based on UINavigationController's setToolbarHidden:animated: and toolbarHidden methods.

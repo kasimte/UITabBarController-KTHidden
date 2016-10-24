@@ -39,13 +39,18 @@
   [super tearDown];
 }
 
-- (void)testExample {
+- (void)testHide {
   UITabBarController *tab = [[UITabBarController alloc] init];
   [tab setTabBarHidden:YES animated:NO completion:nil];
   XCTAssertTrue([tab isTabBarHidden], @"Tab bar should be hidden.");
+}
+
+
+- (void)testHideThenShow {
+  UITabBarController *tab = [[UITabBarController alloc] init];
+  [tab setTabBarHidden:YES animated:NO completion:nil];
   [tab setTabBarHidden:NO animated:NO completion:nil];
   XCTAssertFalse([tab isTabBarHidden], @"Tab bar should not be hidden.");
 }
-
 
 @end
